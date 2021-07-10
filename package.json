@@ -12,7 +12,9 @@
         "audit": "npm audit --registry=https://registry.npmjs.org/",
         "audit:fix": "npm audit fix --registry=https://registry.npmjs.org/",
         "dev": "cross-env NODE_PATH=. NODE_ENV=development nodemon",
-        "lint-fix": "eslint --fix {src,test,config}/**/*.js"
+        "lint-fix": "eslint --fix {src,test,config}/**/*.js",
+        "test:unit": "cross-env NODE_PATH=. NODE_ENV=test mocha --config test/.mocharc.unit.json --reporter mocha-multi-reporters --reporter-options configFile=test/reporter.unit.config.json --exit"
+
     },
     "repository": {
         "type": "git",
@@ -50,7 +52,16 @@
         "winston": "3.2.1"
     },
     "devDependencies": {
+        "chai": "4.2.0",
+        "chai-change": "2.1.2",
+        "chai-spies": "1.0.0",
+        "chance": "1.0.18",
+        "dirty-chai": "2.0.1",
+        "eslint-plugin-mocha-no-only": "1.1.0",
         "husky": "3.0.5",
+        "mocha": "6.2.3",
+        "mocha-junit-reporter": "1.22.0",
+        "mocha-multi-reporters": "1.1.7",
         "nodemon": "1.19.1",
         "nyc": "14.0.0"
     }
