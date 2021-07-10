@@ -1,7 +1,6 @@
 class UserRepository {
     constructor({ userModel }) {
         this.userModel = userModel;
-        this.options = { maxTimeMS: 5000 };
     }
 
     async create(data) {

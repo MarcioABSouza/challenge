@@ -13,20 +13,14 @@ class CreateUserOperation {
 
     async execute(query) {
 
-        try {
-            const userFromDatabase = await this.userRepository.update(query);
+        const userFromDatabase = await this.userRepository.update(query);
 
-            if (!userFromDatabase) {
-                this.logger.error({ file: 'UpdateUserOperation' });
-                throw this.exception.notFound(USER_NOT_FOUND);
-            }
-
-            return userFromDatabase;
-
-        } catch (error) {
-            this.logger.error({ file: 'UpdateUserOperation', debugPayload: query, error });
-            throw this.exception.internalServer();
+        if (!userFromDatabase) {
+            this.logger.error({ file: 'UpdateUserOperation' });
+            throw this.exception.notFound(USER_NOT_FOUND);
         }
+
+        return userFromDatabase;
     }
 }
 

@@ -32,6 +32,6 @@
         "domain": "https://localhost:3000/"
     },
     "stackError": {
-        "isVisible": false
+        "isVisible": true
     }
 }

@@ -18,6 +18,7 @@ module.exports = ({
         .use(bodyParser.json())
         .use(compression())
         .use('/api/user', container.cradle.routerRegister.register(container.cradle.userRouter))
+        .use('/api/city', container.cradle.routerRegister.register(container.cradle.cityRouter))
         .use((req, res, next) => { next(exception.notFound()); })
         .use(httpErrorMiddleware);
 

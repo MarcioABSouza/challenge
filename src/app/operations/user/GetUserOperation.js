@@ -13,33 +13,21 @@ class CreateUserOperation {
 
     async get(query) {
 
-        try {
-            const userFromDatabase = await this.userRepository.get(query);
+        const userFromDatabase = await this.userRepository.get(query);
 
-            if (!userFromDatabase) {
-                this.logger.error({ file: 'GetUserOperation', debugPayload: query });
-                throw this.exception.notFound(USER_NOT_FOUND);
-            }
-
-            return userFromDatabase;
-
-        } catch (error) {
-            this.logger.error({ file: 'GetUserOperation', debugPayload: query, error });
-            throw this.exception.internalServer();
+        if (!userFromDatabase.length) {
+            this.logger.error({ file: 'GetUserOperation', debugPayload: query });
+            throw this.exception.notFound(USER_NOT_FOUND);
         }
+
+        return userFromDatabase;
     }
 
     async getAll() {
 
-        try {
-            const userFromDatabase = await this.userRepository.getAll();
+        const userFromDatabase = await this.userRepository.getAll();
 
-            return userFromDatabase;
-
-        } catch (error) {
-            this.logger.error({ file: 'GetUserOperation', error });
-            throw this.exception.internalServer();
-        }
+        return userFromDatabase;
     }
 }
 
