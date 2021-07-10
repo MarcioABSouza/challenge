@@ -13,23 +13,30 @@ module.exports = ({ providerConnection, config }) => {
             type: String,
             required: true
         },
+        last_name: {
+            type: String,
+            required: true
+        },
+        email: {
+            type: String,
+            required: true,
+            unique: true
+        },
         city: {
             type: String,
             required: true
         },
         age: {
-            type: String,
-            required: true,
-            lowercase: true,
-            unique: true
+            type: Number,
+            required: true
         },
         birth_date: {
-            type: String,
+            type: Date,
             required: true
         }
     }, { versionKey: false, timestamps: true });
 
     userSchema.plugin(autoincrement, { field: 'id' });
 
-    return connection.model(config.db.collections.user.name, userSchema);
+    return connection.model(config.db.collections.users.name, userSchema);
 };

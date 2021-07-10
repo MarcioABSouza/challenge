@@ -8,7 +8,7 @@ module.exports = () => ({
 
             Object.keys(validation).forEach(validationKey => {
                 if (validationKey == 'query') {
-                    schemaOptions.convert = true;
+                    schemaOptions.convert = false;
                 }
                 const { error, value } = validation[validationKey].validate(req[validationKey], schemaOptions);
 
