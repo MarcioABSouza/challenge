@@ -1,0 +1,21 @@
+{
+    "cwd": "./src",
+    "exclude": [
+        "container.js",
+        "app/Application.js",
+        "domain/enums",
+        "interfaces/http/Server.js",
+        "interfaces/http/Router.js",
+        "interfaces/http/errors/HttpErrors.js"
+    ],
+    "reporter": [
+        "cobertura",
+        "html",
+        "lcov",
+        "text-summary"
+    ],
+    "branches": 95,
+    "lines": 95,
+    "functions": 95,
+    "statements": 95
+}

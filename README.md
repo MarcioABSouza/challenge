@@ -46,6 +46,8 @@ The Api provides a collection of npm scripts that can help you. You can run them
 - `start` Run the application in production mode (prefer not to do that in development)
 - `lint`: Lint the codebase
 - `test:unit`: Run all unit tests
+- `audit`: Verify for package vulnerabilities
+- `coverage`: Run the unit tests and generate code coverage for them, the output will be on `coverage` folder
 ## Techs
 
 The most important tecnologies used on this project can be found at: 
