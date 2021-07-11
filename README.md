@@ -42,7 +42,7 @@ is pretty similar to Postman. Using Insomnia you can import the file "Routes.jso
 I choose to build and organize the application using an infraestructure that allows dependency injection to be implemented. Once you use
 dependency injection, what was based in containerization provided by Awilix, unit tests become very easy to be created. You can have an idea about the infraestructure analizing the image bellow:
 
-![](listagem.png)
+![](./arch.png)
 
 Note that i decide to call repository directly from operations and the mapper was replaced by a serializer. Moreover, the database is 
 protected by a validator middleware that prevents unknow fields to be saved.
@@ -61,7 +61,7 @@ The Api provides a collection of npm scripts that can help you. You can run them
 
 The most important tecnologies used on this project can be found at: 
 
-- [Node v10.13+](http://nodejs.org/) JavaScript runtime built on Chrome's V8 JavaScript engine.
+- [Node v12.18+](http://nodejs.org/) JavaScript runtime built on Chrome's V8 JavaScript engine.
 - [Express](https://npmjs.com/package/express) Fast, small, robust tooling for HTTP servers
 - [Awilix](https://www.npmjs.com/package/awilix) For dependency inversion!
 - [Joi](https://www.npmjs.com/package/joi) Used for create Schemas and Validations.
