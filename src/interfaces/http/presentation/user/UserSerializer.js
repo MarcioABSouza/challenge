@@ -1,17 +1,17 @@
 module.exports = () => ({
-    create: ({ id, name, age, city, birth_date, email }) => {
-        return { id, name, age, city, birth_date, email };
+    create: ({ id, name, age, city, birth_date, email, gender }) => {
+        return { id, name, age, city, birth_date, email, gender };
     },
 
     get: (users) => {
-        return users.map(({ id, name, age, city, birth_date, email }) => {
-            return { id, name, age, city, birth_date, email };
+        return users.map(({ id, name, age, city, birth_date, email, gender }) => {
+            return { id, name, age, city, birth_date, email, gender };
         });
     },
 
     getAll: (users) => {
-        return users.map(({ id, name, age, city, birth_date }) => {
-            return { id, name, age, city, birth_date };
+        return users.map(({ id, name, age, city, birth_date, gender }) => {
+            return { id, name, age, city, birth_date, gender };
         });
     },
 

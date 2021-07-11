@@ -14,7 +14,6 @@
         "dev": "cross-env NODE_PATH=. NODE_ENV=development nodemon",
         "lint-fix": "eslint --fix {src,test,config}/**/*.js",
         "test:unit": "cross-env NODE_PATH=. NODE_ENV=test mocha --config test/.mocharc.unit.json --reporter mocha-multi-reporters --reporter-options configFile=test/reporter.unit.config.json --exit"
-
     },
     "repository": {
         "type": "git",
@@ -24,7 +23,8 @@
     "license": "GPL-3.0",
     "husky": {
         "hooks": {
-            "pre-commit": "npm run lint-fix"
+            "pre-commit": "npm run lint-fix",
+            "pre-push": "npm run test:unit"
         }
     },
     "dependencies": {
