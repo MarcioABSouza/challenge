@@ -1,0 +1,37 @@
+{
+    "serviceName": "challenge",
+    "db": {
+        "external": "",
+        "username": "admin",
+        "password": "admin",
+        "database": "challenge",
+        "servers": [
+            "127.0.0.1:27017"
+        ],
+        "dialect": "mongodb",
+        "logging": "",
+        "options": {
+            "authSource": "admin",
+            "replicaSet": ""
+        },
+        "collections": {
+            "users": {
+                "name": "users",
+                "version": "1.0"
+            },
+            "cities": {
+                "name": "cities",
+                "version": "1.0"
+            }
+        }
+    },
+    "web": {
+        "port": 3000
+    },
+    "hateoas": {
+        "domain": "https://localhost:3000/"
+    },
+    "stackError": {
+        "isVisible": true
+    }
+}
