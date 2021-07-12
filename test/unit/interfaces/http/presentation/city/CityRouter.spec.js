@@ -40,7 +40,7 @@ describe('Interfaces :: Http :: Presentation :: User :: CityRouter', () => {
                 },
                 {
                     method: 'delete',
-                    path: '/cep/:cep',
+                    path: '/id/:id',
                     validation: {
                         params: null,
                     },
@@ -54,7 +54,7 @@ describe('Interfaces :: Http :: Presentation :: User :: CityRouter', () => {
                         byCityName:null, 
                         byCityState:null, 
                         getAll: null, 
-                        byCep: null
+                        byId: null
                     },
                     cityController:{
                         create: null,

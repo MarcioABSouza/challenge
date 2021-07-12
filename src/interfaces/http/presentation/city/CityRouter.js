@@ -34,9 +34,9 @@ module.exports = ({ container }) => {
         },
         {
             method: 'delete',
-            path: '/cep/:cep',
+            path: '/id/:id',
             validation: {
-                params: ctx.citySchema.byCep,
+                params: ctx.citySchema.byId,
             },
             handler: ctx.cityController.delete
         }

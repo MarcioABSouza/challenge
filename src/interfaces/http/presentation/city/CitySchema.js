@@ -16,7 +16,7 @@ module.exports = () => ({
         state:joi.string().regex(/^[A-Z]*$/).min(2).max(2).required(),
     }), 
 
-    byCep: joi.object().keys({
-        cep: joi.string().regex(/^[0-9]*$/).min(8).max(8).required(),
+    byId: joi.object().keys({
+        id: joi.string().regex(/^[0-9]*$/).min(1).max(30).required(),
     })
 });

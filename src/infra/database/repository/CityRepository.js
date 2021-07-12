@@ -18,9 +18,9 @@ class UserRepository {
         return await this.cityModel.find({});
     }
 
-    async delete(cep) {
+    async delete(id) {
 
-        return await this.cityModel.findOneAndDelete(cep);
+        return await this.cityModel.findOneAndDelete(id);
     }
 }
 

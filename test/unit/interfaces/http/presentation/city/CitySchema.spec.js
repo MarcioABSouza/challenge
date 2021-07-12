@@ -47,7 +47,7 @@ describe('Interfaces :: Http :: Presentation :: city :: citySchema', () => {
         });
     });
 
-    context('when fields for update is ok', () => {
+    context('when fields for byId is ok', () => {
         let citySchema;
 
         before(() => {
@@ -55,8 +55,8 @@ describe('Interfaces :: Http :: Presentation :: city :: citySchema', () => {
         });
 
         it('returns no error', async () => {
-            const payload = { cep: '13569856'};
-            const { error, value } = citySchema.byCep.validate(payload);
+            const payload = { id: '1'};
+            const { error, value } = citySchema.byId.validate(payload);
             expect(error).to.be.undefined();
             expect(value).to.be.exist();
         });

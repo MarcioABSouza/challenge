@@ -36,7 +36,7 @@ is pretty similar to Postman. Using Insomnia you can import the file "Routes.jso
 2. Get all cities - GET - api/city
 3. Get city by name - GET - api/city/name/:city
 4. Get city by id - GET - api/city/state/:state
-5. Delete city by cep - DELETE - api/city/cep/:cep
+5. Delete city by id - DELETE - api/city/id/:id
 
 ## Microservice Infrastructure
 I choose to build and organize the application using an infraestructure that allows dependency injection to be implemented. Once you use
