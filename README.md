@@ -7,7 +7,14 @@ This project was created to exemplify how i have been evolving during the last f
 The code consists in an API that allows a "manager" to save users information and cities.
 
 Ok, but how can you run this code? 
+
 ### Running the code local machine
+
+#### Requirements
+1. [Node v12.18+](http://nodejs.org/)
+2. [Docker](https://www.docker.com/products/docker-desktop)
+
+#### Steps
 
 1. First you should install the dependencies with `npm install`
 2. Run the docker-compose up with `docker-compose -f "docker-compose.yml" up -d --build` to up mongodb database
@@ -39,6 +46,7 @@ is pretty similar to Postman. Using Insomnia you can import the file "Routes.jso
 5. Delete city by id - DELETE - api/city/id/:id
 
 ## Microservice Infrastructure
+
 I choose to build and organize the application using an infraestructure that allows dependency injection to be implemented. Once you use
 dependency injection, what was based in containerization provided by Awilix, unit tests become very easy to be created. You can have an idea about the infraestructure analizing the image bellow:
 
@@ -57,9 +65,10 @@ The Api provides a collection of npm scripts that can help you. You can run them
 - `test:unit`: Run all unit tests
 - `audit`: Verify for package vulnerabilities
 - `coverage`: Run the unit tests and generate code coverage for them, the output will be on `coverage` folder
+
 ## Techs
 
-The most important tecnologies used on this project can be found at: 
+The most important technologies used on this project can be found at: 
 
 - [Node v12.18+](http://nodejs.org/) JavaScript runtime built on Chrome's V8 JavaScript engine.
 - [Express](https://npmjs.com/package/express) Fast, small, robust tooling for HTTP servers
