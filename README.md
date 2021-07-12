@@ -63,7 +63,7 @@ The most important tecnologies used on this project can be found at:
 
 - [Node v12.18+](http://nodejs.org/) JavaScript runtime built on Chrome's V8 JavaScript engine.
 - [Express](https://npmjs.com/package/express) Fast, small, robust tooling for HTTP servers
-- [Awilix](https://www.npmjs.com/package/awilix) For dependency inversion!
+- [Awilix](https://www.npmjs.com/package/awilix) For containerization and dependency injection!
 - [Joi](https://www.npmjs.com/package/joi) Used for create Schemas and Validations.
 - [Morgan](https://www.npmjs.com/package/morgan) HTTP request logger middleware for node.js
 - [Winston](https://www.npmjs.com/package/winston) A simple and universal logging library with support for multiple transports
